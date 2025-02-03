@@ -1,0 +1,39 @@
+9)create a javascript function using event listener to call function in
+HTML. --
+
+HTML Code with Event Listener
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Example</title>
+    <script>
+        // JavaScript function to be called on button click
+        function showMessage() {
+            alert("Hello! This is an event listener example.");
+        }
+
+        // Function to set up the event listener
+        function setupEventListener() {
+            // Get the button element by its ID
+            const button = document.getElementById("myButton");
+            // Add an event listener for the 'click' event
+            button.addEventListener("click", showMessage);
+        }
+
+        // Set up the event listener when the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", setupEventListener);
+    </script>
+</head>
+<body>
+
+    <h1>Event Listener in JavaScript</h1>
+    <p>Click the button below to see the message:</p>
+    
+    <!-- Button with an ID -->
+    <button id="myButton">Click Me!</button>
+
+</body>
+</html>
