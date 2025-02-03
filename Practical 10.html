@@ -1,0 +1,90 @@
+10)Create a validate login form using javascriptin HTML. -- 
+
+
+HTML Code for a Validated Login Form -- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set font for the body */
+            background-color: #f4f4f4; /* Light background color */
+            padding: 50px; /* Add padding */
+        }
+        form {
+            max-width: 300px; /* Set maximum width for the form */
+            padding: 20px; /* Add padding */
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Round corners */
+            background-color: #fff; /* White background for the form */
+        }
+        label {
+            display: block; /* Make labels block elements */
+            margin-bottom: 5px; /* Add space below labels */
+        }
+        input {
+            width: 100%; /* Full width for inputs */
+            padding: 10px; /* Add padding */
+            margin-bottom: 15px; /* Add space below inputs */
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 4px; /* Round corners */
+        }
+        button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 10px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Round corners */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+    <script>
+        // Function to validate the login form
+        function validateLogin() {
+            // Get the values of the input fields
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check if the username is empty
+            if (username === "") {
+                alert("Please enter your username.");
+                return false; // Prevent form submission
+            }
+
+            // Check if the password is empty
+            if (password === "") {
+                alert("Please enter your password.");
+                return false; // Prevent form submission
+            }
+
+            // Additional validation can be added here (e.g., length checks)
+
+            // If validation passes, return true
+            alert("Login successful!"); // For demonstration purposes
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Login Form</h1>
+
+    <form onsubmit="return validateLogin();"> <!-- Call validateLogin on form submission -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+</body>
+</html>
