@@ -1,0 +1,48 @@
+5)Creating Frame using HTML tags.
+
+Example of Creating Frames Using <frameset> and <frame>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames Example</title>
+</head>
+<frameset rows="50%,50%">
+    <frame src="https://www.example.com" name="topFrame" />
+    <frame src="https://www.example.org" name="bottomFrame" />
+</frameset>
+</html>
+
+
+
+Modern Alternative Using <iframe>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full height of the viewport */
+        }
+        .frame {
+            flex: 1; /* Take equal space */
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <iframe class="frame" src="https://www.example.com" title="Top Frame"></iframe>
+        <iframe class="frame" src="https://www.example.org" title="Bottom Frame"></iframe>
+    </div>
+
+</body>
+</html>
