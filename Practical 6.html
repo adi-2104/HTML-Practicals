@@ -1,0 +1,79 @@
+6)Create a form for taking Uer Paersonal In formation using FORM tag in HTML.
+
+HTML Code for User Personal Information Form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Personal Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set font for the body */
+            margin: 20px; /* Add margin */
+        }
+        form {
+            max-width: 400px; /* Set maximum width for the form */
+            padding: 20px; /* Add padding */
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Round corners */
+            background-color: #f9f9f9; /* Light background color */
+        }
+        label {
+            display: block; /* Make labels block elements */
+            margin-bottom: 5px; /* Add space below labels */
+        }
+        input, select, textarea {
+            width: 100%; /* Full width for inputs */
+            padding: 10px; /* Add padding */
+            margin-bottom: 15px; /* Add space below inputs */
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 4px; /* Round corners */
+        }
+        button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 10px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Round corners */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Personal Information Form</h1>
+
+    <form action="/submit" method="POST"> <!-- Form action and method -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
