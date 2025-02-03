@@ -1,0 +1,62 @@
+3)Creating Table using HTML tags. -- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Table in HTML</title>
+    <style>
+        table {
+            width: 50%; /* Set the width of the table */
+            border-collapse: collapse; /* Collapse borders */
+            margin: 20px 0; /* Add some margin */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* Add border to table cells */
+            text-align: left; /* Align text to the left */
+            padding: 8px; /* Add padding to cells */
+        }
+        th {
+            background-color: #f2f2f2; /* Light gray background for header */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Grades Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Mathematics</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Science</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Emily Johnson</td>
+                <td>History</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Michael Brown</td>
+                <td>English</td>
+                <td>C</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
