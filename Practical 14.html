@@ -1,0 +1,129 @@
+14)Design a shopping website using HTMl,CSS and advance
+javascript element and event handling. -- 
+
+Example Shopping Website Code
+1. HTML (index.html) -- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="script.js" defer></script> <!-- Link to external JavaScript -->
+</head>
+<body>
+
+    <header>
+        <h1>My Shopping Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Available Products</h2>
+            <div class="product" data-name="Product 1" data-price="10">
+                <h3>Product 1</h3>
+                <p>Price: $10</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Product 2" data-price="15">
+                <h3>Product 2</h3>
+                <p>Price: $15</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Product 3" data-price="20">
+                <h3>Product 3</h3>
+                <p>Price: $20</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Shopping Website</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+2. CSS (styles.css) --
+
+body {
+    font-family: Arial, sans-serif; /* Set font for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Light background color */
+}
+
+header {
+    background-color: #4CAF50; /* Green background for header */
+    color: white; /* White text */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center text */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Add margin between items */
+}
+
+nav ul li a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+main {
+    padding: 20px; /* Add padding to main content */
+}
+
+.product {
+    background-color: white; /* White background for products */
+    padding: 15px; /* Add padding */
+    margin: 10px 0; /* Add margin between products */
+    border-radius: 5px; /* Round corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Round corners */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#cart {
+    margin-top: 20px; /* Add margin above cart section */
+}
+
+#cart-items {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+
